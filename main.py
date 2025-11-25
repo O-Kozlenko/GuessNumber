@@ -1,4 +1,7 @@
+import random
+randnum = random.randint(1,50)
 user_input = input()
-if user_input.isdigit():
-else:
-    print()
+while True:
+    if user_input.isdigit():
+    else:
+        print()
