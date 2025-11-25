@@ -1,6 +1,4 @@
 import random
-from pkgutil import resolve_name
-
 randnum = random.randint(1,50)
 tries = 0
 print("Welcome to GuessNumber!")
@@ -11,6 +9,7 @@ while True:
         user_input = int(user_input)
         if user_input == randnum:
             print("You guessed! GG")
+            print("Your tries:", tries)
             break
         elif user_input>50 or user_input<1:
             print("Error 1")
