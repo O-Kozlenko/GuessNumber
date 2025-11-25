@@ -10,7 +10,13 @@ while True:
         if user_input == randnum:
             print("You guessed! GG")
             print("Your tries:", tries)
-            break
+            print("Try again?")
+            print("Yes/No")
+            user_input = input()
+            if user_input == "Yes" or user_input == "yes":
+                tries = 0
+            elif user_input == "No" or user_input == "no":
+                break
         elif user_input>50 or user_input<1:
             print("Error 1")
             print("Try writing number from 1 to 50")
