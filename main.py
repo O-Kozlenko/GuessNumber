@@ -39,4 +39,4 @@ while breake==0:
             tries += 1
     else:
         print("That's not number")
-        print(("What is your guess?(1-50):")
+        print("What is your guess?(1-50):")
