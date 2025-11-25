@@ -4,6 +4,7 @@ tries = 0
 a=0
 breake=0
 print("Welcome to GuessNumber!")
+input("Your username:" )
 print("Difficulty:")
 print("Easy/Normal")
 difficulty = input()
