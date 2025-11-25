@@ -8,6 +8,7 @@ print("What is your guess?(1-50):")
 while True:
     user_input = input()
     if user_input.isdigit():
+        user_input = int(user_input)
         if user_input == randnum:
             print("You guessed! GG")
             break
@@ -15,7 +16,10 @@ while True:
             print("Error 1")
             print("Try writing number from 1 to 50")
         elif user_input!=randnum:
-            print("You are wrong! Try another number")
+            if user_input>randnum:
+                print("Try lower number")
+            elif user_input<randnum:
+                print("Try higher number")
             tries+=1
     else:
         print("That's not number")
