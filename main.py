@@ -2,16 +2,20 @@ import random
 from pkgutil import resolve_name
 
 randnum = random.randint(1,50)
-user_input = input()
 tries = 0
+print("Welcome to GuessNumber!")
+print("What is your guess?(1-50):")
 while True:
+    user_input = input()
     if user_input.isdigit():
         if user_input == randnum:
-            print()
+            print("You guessed! GG")
             break
         elif user_input>50 or user_input<1:
-            print()
+            print("Error 1")
+            print("Try writing number from 1 to 50")
         elif user_input!=randnum:
+            print("You are wrong! Try another number")
             tries+=1
     else:
-        print()
+        print("That's not number")
