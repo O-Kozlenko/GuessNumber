@@ -15,6 +15,8 @@ while True:
             user_input = input()
             if user_input == "Yes" or user_input == "yes":
                 tries = 0
+                randnum = random.randint(1, 50)
+                print("What is your guess?(1-50):")
             elif user_input == "No" or user_input == "no":
                 break
         elif user_input>50 or user_input<1:
