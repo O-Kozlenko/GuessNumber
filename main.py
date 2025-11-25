@@ -1,29 +1,31 @@
 import random
 randnum = random.randint(1,50)
 tries = 0
+a=0
+breake=0
 print("Welcome to GuessNumber!")
 print("What is your guess?(1-50):")
-while True:
+while breake==0:
     user_input = input()
     if user_input.isdigit():
         user_input = int(user_input)
         if user_input == randnum:
-            while True:
-                print("You guessed! GG")
-                print("Your tries:", tries)
-                print("Try again?")
-                print("Yes/No")
+            a=0
+            tries+=1
+            print("You guessed! GG")
+            print("Your tries:", tries)
+            print("Try again?")
+            print("Yes/No")
+            while a == 0:
                 user_input = input()
                 if user_input == "Yes" or user_input == "yes":
                     tries = 0
+                    a = 1
                     randnum = random.randint(1, 50)
-                    print("Difficulty:")
-                    print("Easy/Normal")
-                    difficulty = input()
                     print("What is your guess?(1-50):")
-
                 elif user_input == "No" or user_input == "no":
-                    break
+                    a = 1
+                    breake = 1
                 else:
                     print("Type Yes or No")
         elif user_input > 50 or user_input < 1:
@@ -37,3 +39,4 @@ while True:
             tries += 1
     else:
         print("That's not number")
+        print(("What is your guess?(1-50):")
